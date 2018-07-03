@@ -13,18 +13,48 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import entity.Person;
+import entity.MaintenceRequest;
 import entity.SignUp;
+import repository.MaintenceRequestRepository;
 import repository.SignUpRespository;
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
+import com.twilio.rest.api.v2010.account.MessageCreator;
 
 @RestController
 @CrossOrigin
 public class SignUpController {
 	
+    public static final String ACCOUNT_SID = "ACdbd21fc9a2dbe91be5ce890580a3c7ae";
+    public static final String AUTH_TOKEN = "b665af8ed62a508a19c7cf4e0d24e529";
+    
+    
+	
+	
 	//Injected the bean(an object that springs creates for you)into the object.
 	@Autowired
 	SignUpRespository signUpRespository;
+	MaintenceRequestRepository maintenceRequestRepository;
 	
+	
+	@RequestMapping(value="/maintenceRequest", method=RequestMethod.POST)
+	public ResponseEntity<HttpStatus> maintenceRequest(@RequestBody MaintenceRequest mess ){
+		System.out.println(mess);
+//	maintenceRequestRepository.save(mess);
+		 Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+	        Message message = Message.creator(
+	        		//to number
+	                new com.twilio.type.PhoneNumber("+19092571763"),
+	                //from number
+	                new com.twilio.type.PhoneNumber("+14243960041"),
+	                mess.getMessage())
+	            .create();
+
+	        System.out.println(message.getSid());
+	        
+	        return new ResponseEntity<>(HttpStatus.OK);
+	}
 	
 	@RequestMapping(value="/submitsignupDetails", method=RequestMethod.POST)
 	public ResponseEntity<HttpStatus> submitStudent(@RequestBody SignUp contact){
@@ -51,12 +81,15 @@ public class SignUpController {
 		return new ResponseEntity<SignUp>(signee, HttpStatus.OK);
 
 	}
+
+	
+	
 	@RequestMapping(value="/deleteContactsignUp",produces=MediaType.APPLICATION_JSON_VALUE,method=RequestMethod.DELETE)
 	@ResponseBody	
-	public ResponseEntity<SignUp> DeleteContactSignUp(Integer id){
+	public ResponseEntity<List<SignUp>> DeleteContactSignUp(Integer id){
 		System.out.println(id);
 		signUpRespository.delete(id); 
-		return new ResponseEntity<SignUp>( HttpStatus.OK);
+		return findAllSignUpContact();
 
 	}
 
@@ -67,7 +100,7 @@ public class SignUpController {
 			
 			method=RequestMethod.GET)
 	@ResponseBody	
-	public ResponseEntity<List<SignUp>> findAlltenants(String email){
+	public ResponseEntity<List<SignUp>> findAllSignUpContact(){
 
 		//save the information and inserting the infomration into database 
 		List<SignUp> signee = signUpRespository.findAll();

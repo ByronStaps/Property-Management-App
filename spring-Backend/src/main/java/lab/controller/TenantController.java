@@ -20,6 +20,13 @@ import repository.TenantRespository;
 @CrossOrigin
 
 public class TenantController {
+	
+    public static final String ACCOUNT_SID = "ACdbd21fc9a2dbe91be5ce890580a3c7ae";
+    public static final String AUTH_TOKEN = "b665af8ed62a508a19c7cf4e0d24e529";
+	
+
+	
+
 
 	
 	

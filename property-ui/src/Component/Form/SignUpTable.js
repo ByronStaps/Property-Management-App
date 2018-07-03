@@ -23,13 +23,29 @@ class SignUpTable extends Component {
             });
 
     }
+    removeItem=(id)=>{
+        axios.delete('http://localhost:8080/findallsignupContact',{
+            params:{
+                id:id
+            }
+        })
+        .then(response =>{
+    
+            const signupContact= response.data;
+            this.setState({
+                signupContact:signupContact
+            });
+        });
+    
+    }
+   
 
     render() {
         return (
             <div>
             <table className="table table-striped">
                 <thead>
-                    <h1> Signup Contact Info</h1>
+                <h1> SignUp Table</h1>
                     <tr>
                         <th scope="col">Signup ID </th>
                         <th scope="col">Email</th>
@@ -37,6 +53,8 @@ class SignUpTable extends Component {
                         <th scope="col">Last Name</th>
                         <th scope="col">Telephone</th>
                         <th scope="col">Garage Space</th>
+                        <th scope="col">Delete Sign-Up Contact</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -49,6 +67,8 @@ class SignUpTable extends Component {
                             <td>{signupContact.lastName}</td>
                             <td>{signupContact.telephone}</td>
                             <td>{signupContact.garageSpace}</td>
+                            <button onClick={()=>this.removeItem(signupContact.signupID)} className="btn btn-danger">Delete</button> 
+
                         </tr>
                     )}
                 </tbody>

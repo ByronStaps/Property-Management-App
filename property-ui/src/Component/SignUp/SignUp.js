@@ -86,7 +86,7 @@ class SignUp extends Component {
                                 <div className="form-row">
                                     <div className="form-group col-md-8">
                                         <label htmlFor="inputEmail4">Email</label>
-                                        <input type="email" onChange={this.signUpChangeHandler} value={this.state.emailname} className="form-control" id="inputEmail4" name="email" required/>
+                                        <input type="email" onChange={this.signUpChangeHandler} value={this.state.email} className="form-control" id="inputEmail4" name="email" required/>
                                     </div>
                                     <div className="form-group col-md-6">
                                         <label htmlFor="inputEmail4"> First Name</label>

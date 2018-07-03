@@ -30,9 +30,9 @@ render(){
         <div>
 <table className="table table-striped">
     <thead>
-    <h1> User Information</h1>
+        <h1> Tenant Table</h1>
         <tr>
-            <th scope="col"><ListItemContent/></th>
+           
             <th scope="col">First </th>
             <th scope="col">Last </th>
             <th scope="col">Email</th>
@@ -50,7 +50,6 @@ render(){
 
 {this.state.tenants.map((tenant,index)=>
         <tr key={index}>
-            <th scope="row"><ListItemContent icon='person'></ListItemContent></th>
             <td>{tenant.firstName}</td>
             <td>{tenant.lastName}</td>
             <td>{tenant.email}</td>

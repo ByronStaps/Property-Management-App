@@ -6,7 +6,7 @@ body {
 
 .container{
 
-  margin-top: 200px;
+ 
   width: 680px;
 
 
@@ -54,9 +54,14 @@ tr:nth-child(even) {
 .tripform{
   border-style:ridge;
   border-color: rgb(63, 15, 61);
-  width: 45%;
+  width: 80%;
   border-radius: 2%;
   margin: auto;
   padding: 1%;
-  color: cornflowerblue;
+  
+}
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
 }

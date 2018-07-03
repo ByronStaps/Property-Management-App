@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import pic1 from '../../Images/pic1.jpg';
-import pic2 from '../../Images/pic2.jpg';
+import pic8 from '../../Images/pic8.jpg';
 import axios from 'axios';
 import { Helmet } from "react-helmet";
+import MaintenceRequest from "../Form/MaintenceRequest"
 class Profile extends Component {
 
   state = {
@@ -36,7 +37,9 @@ class Profile extends Component {
   render() {
     let tenantDisplay = (
 
-      <div key={this.state.tenant.telephone} className="card " style={{ width: "600px" }}>
+      
+
+      <div key={this.state.tenant.telephone} className="card tripform" style={{ width: "600px" }}>
         <div className="card-header">
           <h1> Hello {this.state.tenant.firstName}</h1>
         </div>
@@ -51,6 +54,8 @@ class Profile extends Component {
           <li className="list-group-item">{this.state.tenant.rentDue}</li>
           <h2>Lease Term</h2>
           <li className="list-group-item">{this.state.tenant.leaseRenew}</li>
+          <h2>Maintence Request</h2>
+          <li className="list-group-item"> {<MaintenceRequest/>}</li>
         </ul>
       </div>
     );
@@ -58,6 +63,7 @@ class Profile extends Component {
 
       <div className="margintop" align="center">
         <br />
+        <img src={pic8} style={{width:'100%'}} alt="First slide"/>
         <br />
         <br />
         {tenantDisplay}

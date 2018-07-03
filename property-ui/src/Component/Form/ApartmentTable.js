@@ -46,7 +46,8 @@ render(){
 <table className="table table-striped">
 
     <thead>
-    <h1> Apartment Info</h1>
+    <h1> Apartment Table</h1>
+
         <tr>
             <th scope="col">Apartment_ID </th>
             <th scope="col">Bedrooms </th>
