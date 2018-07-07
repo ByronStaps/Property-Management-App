@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import pic3 from '../../Images/pic3.png';
 import axios from 'axios';
+import home from '../Home/Home';
 
 class Header extends Component {
 
@@ -80,7 +81,7 @@ class Header extends Component {
           <NavLink className="nav-link" to="/about-us">About</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/sign-out">Sign out</NavLink>
+          <NavLink onclick={home} className="nav-link" to="/sign-out">Sign out</NavLink>
         </li>
 
       </React.Fragment>

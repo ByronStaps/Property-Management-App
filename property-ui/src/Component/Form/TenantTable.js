@@ -11,9 +11,9 @@ class DisplayTenantTable extends Component{
         loginError:''
     }
 
-    //api to call the get all the data from the MySQL table
+    //api to call the get Tenants the data from the MySQL table
 componentDidMount(){
-    axios.get('http://localhost:8080//findAlltenant')
+    axios.get('http://localhost:8080/findAlltenant')
     .then(Response =>{
 
         const TenantAaary= Response.data;

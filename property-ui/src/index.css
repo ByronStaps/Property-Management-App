@@ -53,15 +53,114 @@ tr:nth-child(even) {
 }
 .tripform{
   border-style:ridge;
-  border-color: rgb(63, 15, 61);
+  border-color: orangered;
   width: 80%;
   border-radius: 2%;
   margin: auto;
   padding: 1%;
   
 }
-.sidenav {
-  padding-top: 20px;
-  background-color: #f1f1f1;
-  height: 100%;
+.centerbold{
+
+  text-align: center;
+  font-size: 26pt;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-feature-settings: "akhn";
+
+}
+
+.form-inline{
+  float: right;
+}
+
+.carousel-caption{
+  padding-bottom: 274px;
+}
+
+.firstcontenttop {
+  position: absolute;
+  color: orangered;
+  left: 0;
+  right: 0;
+  top: 140px;
+  display: block;
+
+}
+.whitecolor{
+  color: whitesmoke;
+}
+
+.fontstyle{
+  font-family: helveticacondensed;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 62px;
+  text-transform: uppercase;
+  
+}
+
+.h2fontstyle{
+  font-size: 47px;
+  margin-top: -15px;
+  font-family: vijayabold;
+  margin-bottom: 60px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+  color: orangered;
+}
+.imagefontstyle{
+
+  text-align: center;
+  font-size: 37px;
+  margin-top: -15px;
+  font-family: vijayabold;
+  margin-bottom: 60px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+  color: orangered;
+  text-transform: uppercase;
+}
+.bodyfontstyle{
+
+  margin-bottom: 60px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+  color: orangered;
+}
+.imagebackground{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.orangecolor{
+  color: orangered;
+}
+.contactusstyle{
+ 
+  text-align: center;
+}
+.zx{
+  font-size: 47px;
+  text-align: center;
+  margin-top: -15px;
+  font-family: vijayabold;
+  margin-bottom: 60px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+  color: orangered;
+}
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-style: ridge;
+  border-color: black;
+  width: 80%;
+  border-radius: 2%;
+  margin: auto;
+  padding: 1%;
+}
+.center{
+  text-align: center;
+  bottom: center;
+}
+.buttoncenter{
+align-items: center;
 }

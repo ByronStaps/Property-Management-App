@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import pic1 from '../../Images/pic1.jpg';
+import pic2 from '../../Images/pic2.jpg';
+import pic4 from '../../Images/pic4.jpg';
+import pic5 from '../../Images/pic5.jpg';
+import pic6 from '../../Images/pic6.jpg';
+import pic7 from '../../Images/pic7.jpg';
+import pic9 from '../../Images/pic9.jpg';
+import pic10 from '../../Images/pic10.jpg';
+import pic11 from '../../Images/pic11.jpg';
 
 
 class SignUp extends Component {
@@ -62,55 +71,81 @@ class SignUp extends Component {
 
         return (
             <React.Fragment>
+  <div className="w3-content" style={{ 'max-width': '1200px' }}>
 
-                <div className="w3-content" style={{ 'max-width': '1200px' }}>
+{/* First Grid: Logo & About   */}
+<div className="w3-row">
+    <div className="w3-half w3-container">
+        <h1 className="w3-xxlarge w3-text-light-grey">Let Us</h1>
+        <h1 className="w3-xxlarge w3-text-grey">Be Your</h1>
+        <h1 className="w3-jumbo">Next Home</h1>
+    </div>
+    <div className="w3-half w3-container w3-xlarge w3-text-grey">
+    <h1 className="zx"> Downtown St.Louis </h1>
+        <p className="">
+        
+            The genesis and development of the historic Arcade Apartments renovation project – a jewel of the city’s downtown revitalization strategy – is the result of Dominium’s collaboration with many area groups and organizations including the city, Webster University, and Downtown St. Louis, Inc.
 
-                    <div className="w3-panel">
-                        <i className="w3-xlarge fa fa-bars"></i>
-                    </div>
-                    {/* First Grid: Logo & About   */}
-                    <div className="w3-row">
-                        <div className="w3-half w3-container">
-                            <h1 className="w3-xxlarge w3-text-light-grey">LET US</h1>
-                            <h1 className="w3-xxlarge w3-text-grey">Be YOUR</h1>
-                            <h1 className="w3-jumbo">Next Home</h1>
-                        </div>
-                        <div className=" w3-container w3-xlarge w3-text-grey">
-                            <div id="main-lt">
-                                <iframe width="100px" src="https://www.youtube.com/embed/1DBHLbiJ6ls" frameBorder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>        <div className="clr height25"></div>
+        </p>
+    </div>
+</div>
 
-                            </div>
-                            {redirect}
-                            <form onSubmit={this.signUpSubmitHandler} className="container">
-                                <h1> Contact Information </h1>
+{/* Second Grid: Resent   */}
+<div className="bodyfontstyle">
+    <h4>Like Us On YouTube:</h4>
+</div>
+<div className="w3-row">
+    <div className="w3-half w3-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7OlE9PAezyQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <br/>
+    <br/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+    <div className="w3-half w3-container">
+        <img src={pic7} style={{ width: '100%' }} />
+        <br/>
+        <br/>
+        <p className="w3-xlarge bodyfontstyle contactusstyle" >
+            RoofTop Pool, Bowling, Rockclimb, 24/7 Fitness, Events, Media, Pet Friendly, RoofTop Bar </p>
+    </div>
+
+     <form onSubmit={this.signUpSubmitHandler} >
                                 <div className="form-row">
-                                    <div className="form-group col-md-8">
+                                <h1 className='center'> Contact Information </h1>
+                                    <div className="form-group col-md-10">
                                         <label htmlFor="inputEmail4">Email</label>
-                                        <input type="email" onChange={this.signUpChangeHandler} value={this.state.email} className="form-control" id="inputEmail4" name="email" required/>
+                                        <input type="email" onChange={this.signUpChangeHandler} value={this.state.email} className="form-control" id="inputEmail4" name="email" required />
                                     </div>
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-md-8">
                                         <label htmlFor="inputEmail4"> First Name</label>
-                                        <input type="text" onChange={this.signUpChangeHandler} value={this.state.firstName} className="form-control" id="inputfirstName" name="firstName" required/>
+                                        <input type="text" onChange={this.signUpChangeHandler} value={this.state.firstName} className="form-control" id="inputfirstName" name="firstName" required />
                                     </div>
                                     <div className="form-group col-md-6">
                                         <label htmlFor="inputEmail4"> Last Name</label>
-                                        <input type="text" onChange={this.signUpChangeHandler} value={this.state.lastName} className="form-control" id="inputlastName" name="lastName" required/>
+                                        <input type="text" onChange={this.signUpChangeHandler} value={this.state.lastName} className="form-control" id="inputlastName" name="lastName" required />
                                     </div>
                                     <div className="form-group col-md-4">
                                         <label htmlFor="inputEmail4">Phone Number</label>
-                                        <input type="text" onChange={this.signUpChangeHandler} value={this.state.telephone} className="form-control" id="inputtelephone" name="telephone" required/>
+                                        <input type="text" onChange={this.signUpChangeHandler} value={this.state.telephone} className="form-control" id="inputtelephone" name="telephone" required />
                                     </div>
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-md-2">
                                         <label htmlFor="inputEmail4"> Garage Space</label>
-                                        <input type="text" onChange={this.signUpChangeHandler} value={this.state.garageSpace} className="form-control" id="inputgarageSpace" name="garageSpace" required/>
+                                        <input type="text" onChange={this.signUpChangeHandler} value={this.state.garageSpace} className="form-control" id="inputgarageSpace" name="garageSpace" required />
                                     </div>
-  >
+                                    
+
+                                <button type="submit" className="btn btn-primary center"  onSubmit={this.signUpSubmitHandler} >Submit</button>
                                 </div>
-                                
-                                <button type="submit" className="btn btn-primary alert alert-success" onSubmit={this.signUpSubmitHandler} >Submit</button>
                             </form >
-                        </div>
+                            <div>
+                            <div/>
+    
+
                         {/* Footer   */}
+                        <br/>
                         <div className="w3-row w3-section">
                             <div className="w3-third w3-container w3-black w3-large" style={{ height: '250px' }}>
                                 <h2>Contact Info</h2>
@@ -134,6 +169,8 @@ class SignUp extends Component {
                         </div>
                     </div>
                 </div>
+                </div>
+            
 
 
 
