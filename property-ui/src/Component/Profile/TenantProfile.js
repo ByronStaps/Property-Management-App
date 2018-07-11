@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import pic1 from '../../Images/pic1.jpg';
 import pic8 from '../../Images/pic8.jpg';
 import axios from 'axios';
-import { Helmet } from "react-helmet";
-import MaintenceRequest from "../Form/MaintenceRequest"
+import MaintenceRequest from "../Admin/MaintenceRequest"
 class Profile extends Component {
 
   state = {
@@ -74,7 +72,7 @@ class Profile extends Component {
             width="600"
             height="450"
             frameBorder="0" style={{ width: "100%" }}
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12466.80654775535!2d-90.2106829!3d38.6327444!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7fa2c9991ac6421e!2sClaim+Academy!5e0!3m2!1sen!2sus!4v1526420917315">
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12466.80654775535!2d-90.2106829!3d38.6327444!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7fa2c9991ac6421e!2sClaim+Academy!5e0!3m2!1sen!2sus!4v1526420917315" title="Claim">
           </iframe>
         </div>
 

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import entity.MaintenceRequest;
 import entity.SignUp;
+import lab.service.SendMail;
 import repository.MaintenceRequestRepository;
 import repository.SignUpRespository;
 import com.twilio.Twilio;
@@ -35,7 +36,12 @@ public class SignUpController {
 	//Injected the bean(an object that springs creates for you)into the object.
 	@Autowired
 	SignUpRespository signUpRespository;
+	
+	@Autowired
 	MaintenceRequestRepository maintenceRequestRepository;
+	
+	@Autowired
+	SendMail sendMailService;
 	
 	
 	@RequestMapping(value="/maintenceRequest", method=RequestMethod.POST)
@@ -62,6 +68,7 @@ public class SignUpController {
 
 		//save the information and inserting the infomration into database 
 		signUpRespository.save(contact);
+		sendMailService.sendMails(contact.getEmail(), "Property Inquire", "Hi" + contact.getFirstName()+" Thanks one of our team members would be in contact shortly");
 		
 		System.out.println(contact);
 

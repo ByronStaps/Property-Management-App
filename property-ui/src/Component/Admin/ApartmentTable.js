@@ -16,6 +16,7 @@ componentDidMount(){
     axios.get('http://localhost:8080/findallApartment')
     .then(Response =>{
 
+    //apartmentents should have the same name as your variables in the class
         const apartmentArray= Response.data;
         this.setState({
 
@@ -46,7 +47,7 @@ render(){
 <table className="table table-striped">
 
     <thead>
-    <h1> Apartment Table</h1>
+    <h1 className="imagefontstyle"> Apartment Table</h1>
 
         <tr>
             <th scope="col">Apartment_ID </th>

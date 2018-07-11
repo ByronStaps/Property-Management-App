@@ -1,6 +1,4 @@
 import React from 'react';
-import pic1 from '../../Images/pic1.jpg';
-import pic2 from '../../Images/pic2.jpg';
 import pic4 from '../../Images/pic4.jpg';
 import pic5 from '../../Images/pic5.jpg';
 import pic6 from '../../Images/pic6.jpg';
@@ -37,17 +35,17 @@ const home = (props) => {
 
       <div className="row">
         <div className="col-sm-4">
-          <img src={pic9} style={{ width: '100%' }} className="img-responsive" alt="Image" />
+          <img src={pic9} style={{ width: '100%' }} className="img-responsive" alt="Rooftop Pool" />
           <br />
           <p className='imagefontstyle'>Rooftop Pool</p>
         </div>
         <div className="col-sm-4">
-          <img src={pic10} style={{ width: '100%' }} className="img-responsive" alt="Image" />
+          <img src={pic10} style={{ width: '100%' }} className="img-responsive" alt="Fitness" />
           <br />
           <p className='imagefontstyle'>24/7 Fitness Room</p>
         </div>
         <div className="col-sm-4">
-          <img src={pic11} style={{ width: '100%' }} className="img-responsiv" alt="Image" />
+          <img src={pic11} style={{ width: '100%' }} className="img-responsiv" alt="Pet" />
           <br />
           <br />
           <p className='imagefontstyle'> Pet Friendly </p>
@@ -64,12 +62,12 @@ const home = (props) => {
 
       <div className="row featurette">
         <div className="col-md-7">
-          <h2 className="featurette-heading bodyfontstyle">First featurette heading. <span className="text-muted">It'll blow your mind.</span></h2>
+          <h2 className="featurette-heading bodyfontstyle">Relax Your Home. <span className="text-muted">It'll blow your mind.</span></h2>
           <p className="lead">
             This is where you'll find a home unlike any other. Central, yet secluded, this is a place where past history meets a bright future, creating a unique character defined by venerable landmarks, refreshing spaces and a neighborhood alive with optimism and activity.</p>
         </div>
         <div className="col-md-5">
-          <img className="featurette-image img-fluid mx-auto" src={pic5} style={{ width: '100%' }} alt="Generic placeholder image" />
+          <img className="featurette-image img-fluid mx-auto" src={pic5} style={{ width: '100%' }} alt="Luxury Apartments" />
         </div>
       </div>
 
@@ -84,7 +82,7 @@ const home = (props) => {
             Amid a very dynamic downtown regeneration, The Arcade joins – in the most recent round of revitalization efforts – other noteworthy undertakings like the The National Blues Museum and the CityArchRiver project </p>
         </div>
         <div className="col-md-5 order-md-1">
-          <img className="featurette-image img-fluid mx-auto" src={pic6} style={{ width: '100%' }} alt="Generic placeholder image" />
+          <img className="featurette-image img-fluid mx-auto" src={pic6} style={{ width: '100%' }} alt="Downtown STL" />
         </div>
       </div>
 
@@ -97,7 +95,7 @@ const home = (props) => {
             As a resident you will be encircled with inspired artwork created by those who live in the community and you will enjoy access to more than 11,000 square feet of shared studio spaces. Artwork will be installed throughout the building’s common areas and marble-lined hallways along with artist lounge and galleries located on various floors. These galleries offer residents the opportunity to showcase their talents and inspire others with their creations.</p>
         </div>
         <div className="col-md-5">
-          <img className="featurette-image img-fluid mx-auto" src={pic4} style={{ width: '100%' }} alt="Generic placeholder image" />
+          <img className="featurette-image img-fluid mx-auto" src={pic4} style={{ width: '100%' }} alt="Artwork" />
         </div>
       </div>
       <br />
@@ -105,6 +103,7 @@ const home = (props) => {
       <br />
       <div align="center">
           <iframe
+          title="Claim"
             width="600"
             height="450"
             frameBorder="0" style={{ width: "100%" }}

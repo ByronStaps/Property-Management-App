@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import {ListItemContent} from 'react-mdl';
 
 
 
@@ -30,7 +29,7 @@ render(){
         <div>
 <table className="table table-striped">
     <thead>
-        <h1> Tenant Table</h1>
+        <h1 className="imagefontstyle"> Tenant Table</h1>
         <tr>
            
             <th scope="col">First </th>

@@ -30,13 +30,13 @@ const aboutUs = (props) =>{
             </div>
             <div className="w3-row">
                 <div className="w3-half w3-container w3-xlarge w3-text-grey">
-                    <img src={pic12} style={{ width: '100%' }} />
+                    <img src={pic12} style={{ width: '100%' }}  alt="Team"/>
 
                     <p>In 2000, Don and Cindy took the same principals of hard work, business ethics, and respect for people that had guided them to success as sales agents and as investors, and launched their own company, Eaton Properties. Eaton Properties is a full service real estate company licensed by the state of Missouri and governed by the laws and statutes of the state.</p>
 
                 </div>
                 <div className="w3-half w3-container">
-                    <img src={pic1} style={{ width: '100%' }} />
+                    <img src={pic1} style={{ width: '100%' }} alt="Me" />
                 </div>
                
 </div>

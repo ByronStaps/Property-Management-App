@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import pic1 from '../../Images/pic1.jpg';
-import pic2 from '../../Images/pic2.jpg';
-import pic4 from '../../Images/pic4.jpg';
-import pic5 from '../../Images/pic5.jpg';
-import pic6 from '../../Images/pic6.jpg';
 import pic7 from '../../Images/pic7.jpg';
-import pic9 from '../../Images/pic9.jpg';
-import pic10 from '../../Images/pic10.jpg';
-import pic11 from '../../Images/pic11.jpg';
 
 
 class SignUp extends Component {
@@ -71,6 +63,7 @@ class SignUp extends Component {
 
         return (
             <React.Fragment>
+                {redirect}
   <div className="w3-content" style={{ 'max-width': '1200px' }}>
 
 {/* First Grid: Logo & About   */}
@@ -96,7 +89,7 @@ class SignUp extends Component {
 </div>
 <div className="w3-row">
     <div className="w3-half w3-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/7OlE9PAezyQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="560" height="315" title="Acrade Apartments"src="https://www.youtube.com/embed/7OlE9PAezyQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <br/>
     <br/>
     </div>
@@ -105,7 +98,7 @@ class SignUp extends Component {
     <br/>
 
     <div className="w3-half w3-container">
-        <img src={pic7} style={{ width: '100%' }} />
+        <img src={pic7} style={{ width: '100%' }} alt="Apartments" />
         <br/>
         <br/>
         <p className="w3-xlarge bodyfontstyle contactusstyle" >

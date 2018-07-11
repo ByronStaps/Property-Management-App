@@ -56,7 +56,7 @@ import React, { Component } from 'react';
             <React.Fragment>
             {redirect}
             <form onSubmit={this.newTenantSubmitHandler} className="container" align="center">
-            <h1>Register Tenant</h1>            
+            <h1 className="imagefontstyle">Register Tenant</h1>            
                 <div className="form-row">
                 <div className="form-group col-md-6">
                         <label htmlFor="firstName">First Name</label>
@@ -92,7 +92,7 @@ import React, { Component } from 'react';
                     </div>
                 </div>
                 
-                <button type="submit" className="btn btn-primary">Register Tenant</button>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
 
              </React.Fragment>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import { ListItemContent } from 'react-mdl';
 
 
 class SignUpTable extends Component {
@@ -45,7 +44,7 @@ class SignUpTable extends Component {
             <div>
             <table className="table table-striped">
                 <thead>
-                <h1> SignUp Table</h1>
+                <h1 className="imagefontstyle"> SignUp Table</h1>
                     <tr>
                         <th scope="col">Signup ID </th>
                         <th scope="col">Email</th>
