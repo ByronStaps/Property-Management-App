@@ -48,9 +48,10 @@ render(){
         <div className="row">
           <div className="col-sm-5">
             <p>Contact us and we'll get back to you within 24 hours.</p>
-            <p><span className="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-            <p><span className="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-            <p><span className="glyphicon glyphicon-envelope"></span> myemail@something.com</p> 
+            <p><span className="glyphicon glyphicon-map-marker"></span> St.Louis, US</p>
+            <p><span className="glyphicon glyphicon-phone"></span> +19092571763
+            </p>
+            <p><span className="glyphicon glyphicon-envelope"></span> Byronstaples@gmail.com</p> 
           </div>
           <div className="col-sm-7">
             <div className="row">

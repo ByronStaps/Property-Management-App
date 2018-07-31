@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import pic7 from '../../Images/pic7.jpg';
+import aboutUs from '../AboutUs/AboutUs';
+
 
 
 class SignUp extends Component {
@@ -11,10 +13,12 @@ class SignUp extends Component {
         firstName: '',
         lastName: '',
         telephone: '',
-        garageSpace: ''
+        garageSpace: '',
+        redirect:null
     }
 
     signUpSubmitHandler = (event) => {
+
         //Add Logic for API call to save the user, and connect to the  DataBase 
         event.preventDefault();// hides the query string from being displated on the browser;
 
@@ -29,10 +33,21 @@ class SignUp extends Component {
         }
 
         //Makes call to local 8080, and the Controller requestMapping takes a URL, and the data from 
-        axios.post('http://localhost:8080/submitsignupDetails', contactInformation)
+        axios.post('http://localhost:8080/submitsignupDetails', contactInformation )
+        .then(res => {
 
+            
 
+            const redirectThankYou = (<Redirect to= {{
+            
+            pathname: 'thankYou',
+            state:{firstName:this.state.firstName} }}
+            
+            />);
 
+            this.setState({redirect: redirectThankYou})
+
+        })
 
     }
 
@@ -54,16 +69,13 @@ class SignUp extends Component {
     }
 
     render() {
-        let redirect = null;
 
-        if (this.props.isLoggedInuser) {
-            redirect = (<Redirect to="/" />);
-        }
 
 
         return (
             <React.Fragment>
-                {redirect}
+
+                {this.state.redirect}
   <div className="w3-content" style={{ 'max-width': '1200px' }}>
 
 {/* First Grid: Logo & About   */}
@@ -129,8 +141,9 @@ class SignUp extends Component {
                                         <input type="text" onChange={this.signUpChangeHandler} value={this.state.garageSpace} className="form-control" id="inputgarageSpace" name="garageSpace" required />
                                     </div>
                                     
-
-                                <button type="submit" className="btn btn-primary center"  onSubmit={this.signUpSubmitHandler} >Submit</button>
+                            
+                                <button type="submit" className="btn btn-primary center">Submit</button>
+                            
                                 </div>
                             </form >
                             <div>

@@ -6,6 +6,7 @@ import SignUp from  '../SignUp/SignUp';
 import AboutUs from '../AboutUs/AboutUs';
 import Home from '../Home/Home';
 import Profile from '../Profile/Profile';
+import ThankYou from '../Thank You/Thankyou';
 
 
 class Layout extends Component {
@@ -31,8 +32,9 @@ render(){
             <React.Fragment>        
         <Route exact path="/about-us" component={AboutUs}/>
         <Route exact path="/sign-up" component={SignUp}/>
-        <Route exact path="/home" component={Home}/>
         <Route exact path="/" component={Home}/>
+        <Route exact path="/thankYou" component={ThankYou}/>
+
             </React.Fragment>
     );
     if(this.state.isUserLoggedIn){

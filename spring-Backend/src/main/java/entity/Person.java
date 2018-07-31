@@ -20,8 +20,8 @@ import javax.persistence.Table;
 // Name the table you trying to map this data table
 @Table(name = "person")
 
-public class Person {
-	
+public class Person {	
+
 	
 	@Column(name="apartmentID")
 	private int aprtment_ID;

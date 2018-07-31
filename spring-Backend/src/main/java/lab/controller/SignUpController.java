@@ -56,6 +56,10 @@ public class SignUpController {
 	                new com.twilio.type.PhoneNumber("+14243960041"),
 	                mess.getMessage())
 	            .create();
+	        
+			sendMailService.sendMails(mess.getEmail(),"Maintence Request","Thank you, we recieved your request in will be in touch in "
+					+ "the next 24 hours"+" \n"+" \n"+"Byron Staples\nProperty Management 909-257-1763");
+
 
 	        System.out.println(message.getSid());
 	        
@@ -68,7 +72,8 @@ public class SignUpController {
 
 		//save the information and inserting the infomration into database 
 		signUpRespository.save(contact);
-		sendMailService.sendMails(contact.getEmail(), "Property Inquire", "Hi" + contact.getFirstName()+" Thanks one of our team members would be in contact shortly");
+		sendMailService.sendMails(contact.getEmail(), "Property Inquire", "Hi" + " " + contact.getFirstName()+"  \nThank one of our team members would be in contact shortly "
+				+ " \n"+" \n"+"Byron Staples\nProperty Management 909-257-1763");
 		
 		System.out.println(contact);
 
